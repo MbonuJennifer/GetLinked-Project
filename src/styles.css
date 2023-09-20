@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    --pry-color: #150E28;
+    --sec-light-purple:#D434FE;
+    --sec-dark-purple:#903AFF;
+    --sec-white:#ffffff;
+    --sec-pink:#FF26B9;
+    --btn-bg:linear-gradient(to left, #903aff, #9e39ff, #ac37ff, #b936ff, #c535ff, #d131f8, #db2ef2, #e52ceb, #ee29de, #f52ad1, #fb2ec4, #fe34b9);
+}
+body{
+    background-color: var(--pry-color);
+}
