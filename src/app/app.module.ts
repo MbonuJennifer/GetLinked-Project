@@ -14,6 +14,9 @@ import { PrizesSectionComponent } from './Components/prizes-section/prizes-secti
 import { PartnersSectionComponent } from './Components/partners-section/partners-section.component';
 import { PrivacySectionComponent } from './Components/privacy-section/privacy-section.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { HomeComponent } from './Pages/home/home.component';
+import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.component';
+import { ContactComponent } from './Pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FooterComponent } from './Components/footer/footer.component';
     PrizesSectionComponent,
     PartnersSectionComponent,
     PrivacySectionComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

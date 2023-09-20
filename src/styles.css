@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto:wght@100;300&display=swap');
 
 * {
   margin: 0;
@@ -6,13 +6,41 @@
   box-sizing: border-box;
 }
 :root {
-    --pry-color: #150E28;
-    --sec-light-purple:#D434FE;
-    --sec-dark-purple:#903AFF;
-    --sec-white:#ffffff;
-    --sec-pink:#FF26B9;
-    --btn-bg:linear-gradient(to left, #903aff, #9e39ff, #ac37ff, #b936ff, #c535ff, #d131f8, #db2ef2, #e52ceb, #ee29de, #f52ad1, #fb2ec4, #fe34b9);
+  --pry-color: #150e28;
+  --sec-light-purple: #d434fe;
+  --sec-dark-purple: #903aff;
+  --sec-white: #ffffff;
+  --sec-pink: #ff26b9;
+  --btn-bg: linear-gradient(
+    to left,
+    #903aff,
+    #9e39ff,
+    #ac37ff,
+    #b936ff,
+    #c535ff,
+    #d131f8,
+    #db2ef2,
+    #e52ceb,
+    #ee29de,
+    #f52ad1,
+    #fb2ec4,
+    #fe34b9
+  );
+  --btn-border: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(60deg, #903aff, #d434fe, #fe34b9) border-box;
 }
-body{
-    background-color: var(--pry-color);
+body {
+  background-color: var(--pry-color);
+  color: var(--sec-white);
+}
+p{
+    font-family: "Montserrat", sans-serif;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Merriweather", serif;
 }
