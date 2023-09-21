@@ -1,0 +1,16 @@
+.footer-title {
+  font-family: "Montserrat", serif;
+  font-size: 37px;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
+  line-height: 35px;
+
+  margin-bottom: 15px;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: var(--sec-white);
+}
