@@ -11,6 +11,7 @@
   --sec-dark-purple: #903aff;
   --sec-white: #ffffff;
   --sec-pink: #ff26b9;
+  --icon-green:#2DE100;
   --btn-bg: linear-gradient(
     to left,
     #903aff,
@@ -33,7 +34,7 @@ body {
   background-color: var(--pry-color);
   color: var(--sec-white);
 }
-p{
+p, ul{
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
 font-weight: 300;

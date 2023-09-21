@@ -1,0 +1,39 @@
+.cardBox {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.8px);
+  -webkit-backdrop-filter: blur(2.8px);
+  border: 1px solid var(--sec-light-purple);
+  padding: 4rem;
+  margin-top: 4rem;
+}
+ul li{
+    list-style: none;
+
+}
+ul li:before {    
+    content: '\F26A';
+    margin:0 5px 0 -20px;
+    color: var(--icon-green);
+}
+.privacy-title {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 35px;
+  width: 22rem;
+  margin-bottom: 15px;
+}
+.privacy-para{
+    width: 32rem;
+}
+.privacy-para1{
+    opacity: .4;
+}
+.licence-subTitle{
+    color: var(--sec-light-purple);
+}
+/* .privacy-img{
+    height: ;
+} */
