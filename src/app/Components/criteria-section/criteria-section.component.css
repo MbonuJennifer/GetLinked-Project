@@ -1,0 +1,14 @@
+.criteria-img {
+  height: 32rem;
+}
+.criteria-title {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 35px;
+  width: 17rem;
+  margin-bottom: 15px;
+}
+.criteria-para{
+    width: 32rem;
+}

@@ -1,3 +1,33 @@
-body {
-    color: var(--sec-white);
+.hero-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+}
+.hero-para {
+  width: 22rem;
+}
+#hero-section {
+  padding: 2rem 0;
+}
+#countdown {
+  margin-top: 2rem;
+  font-family: "Roboto", serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+#closed {
+  margin-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.hero-subTitle {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+.hero-img {
+  height: 28rem;
+  width: 32rem;
 }

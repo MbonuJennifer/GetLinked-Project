@@ -1,0 +1,17 @@
+.intro-title {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 35px;
+  width: 25rem;
+  margin-bottom: 15px;
+}
+.intro-para{
+    width: 32rem;
+}
+.intro-img{
+    height: 19rem;
+}
+#intro-section{
+    padding: 5rem 0;
+}

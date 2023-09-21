@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto:wght@100;300&display=swap");
 
 * {
   margin: 0;
@@ -34,8 +34,11 @@ body {
   color: var(--sec-white);
 }
 p{
-    font-family: "Montserrat", sans-serif;
-
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+font-weight: 300;
+line-height: 26.4px;
+  opacity: .9;
 }
 h1,
 h2,
@@ -44,3 +47,25 @@ h4,
 h5 {
   font-family: "Merriweather", serif;
 }
+.btn-style{
+  background: var(--btn-bg);
+  font-size: 14px;
+  margin-top: .5rem;
+  padding: 0.6rem 2.2rem;
+  color: white;
+  transition: all 100ms ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+}
+.btn-style:active{
+  background: var(--btn-border);
+}
+.heading-colour-change{
+  color: var(--sec-light-purple);
+}
+.para-colour-change{
+  color: var(--sec-pink);
+  font-weight: bold;
+}
+
