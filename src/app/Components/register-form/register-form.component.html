@@ -1,0 +1,134 @@
+<section id="contact-section">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-xs-12"></div>
+        <div class="col-md-7 col-xs-12">
+          <div class="card p-5">
+            <h4 class="Contact-Title heading-colour-change">Register</h4>
+            <p>Be part of this movement!</p>
+            <h5>CREATE YOUR ACCOUNT</h5>
+
+            <form
+              [formGroup]="registerForm"
+              (ngSubmit)="onSubmit()"
+              class="row gx-4 gy-3 py-4"
+            >
+              <div class="col-md-6 col-xs-12 form-group">
+                <label class="form-label">Team's Name</label>
+                <input
+                  formControlName="teamName"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['teamName'].errors
+                  }"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter the name of your group"
+                />
+                <div
+                  *ngIf="submitted && f['teamName'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['teamName'].errors['required']">
+                    Your team's name is required
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6 col-xs-12">
+                <label for="inputPhone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="inputPhone"
+                  placeholder="Enter your phone number"
+                  formControlName="phone"
+                  [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }"
+                />
+                <div
+                  *ngIf="submitted && f['phone'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['phone'].errors['required']">
+                    Username is required
+                  </div>
+                  <div *ngIf="f['phone'].errors['minlength']">
+                    Phone number must be at least 11 numbers without country code
+                  </div>
+                  <div *ngIf="f['phone'].errors['maxlength']">
+                    Phone number must not exceed 13 numbers with countey code
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="Enter your email address"
+                />
+                <div
+                  *ngIf="submitted && f['fullname'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['fullname'].errors['required']">
+                    Email address is required
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="inputTopic" class="form-label">Project Topic</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputTopic"
+                  placeholder="What's your group's topic"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputCategory" class="form-label">Category</label>
+                <select id="inputCategory" class="form-select">
+                  <option selected>Select your category</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="inputSize" class="form-label">Group Size</label>
+                <select id="inputSize" class="form-select">
+                  <option selected>Seclect your group size</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <p class="para-colour-change mb-0">
+                  Please review your registration details before submitting
+                </p>
+              </div>
+              <div class="col-12">
+                <div class="form-group form-check">
+                  <input
+                    class="form-check-input"
+                    formControlName="acceptTerms"
+                    type="checkbox"
+                    [ngClass]="{
+                      'is-invalid': submitted && f['acceptTerms'].errors
+                    }"
+                  />
+                  <label class="form-check-label" for="acceptTerms">
+                    I agreed with the event terms and conditions and privacy
+                    policy
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn register-btn btn-style w-100">
+                  Register Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

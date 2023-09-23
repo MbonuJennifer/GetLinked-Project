@@ -1,4 +1,4 @@
-<footer>
+<footer class="mb-0 pb-0">
   <div class="mt-5 pt-5 pb-5 footer">
     <div class="container">
       <div class="row">
@@ -16,16 +16,16 @@
         <div class="col-lg-3 col-xs-12 links">
           <h5 class="mt-lg-0 mt-sm-3 heading-colour-change fw-bold">Useful Links</h5>
           <ul class="m-0 p-0">
-            <li class="my-3"><a href="#">Overview</a></li>
-            <li class="mb-3"><a href="#">Timeline</a></li>
-            <li class="mb-3"><a href="#">FAQs</a></li>
-            <li class="mb-3"><a href="#">Register</a></li>
+            <li class="my-3"><a href="#" [routerLink]="['home']" routerLinkActive="active">Overview</a></li>
+            <li class="mb-3"><a href="#" routerLink="/home" routerLinkActive="active">Timeline</a></li>
+            <li class="mb-3"><a href="#faq-section" routerLink="/home" routerLinkActive="active">FAQs</a></li>
+            <li class="mb-3"><a href="#" [routerLink]="['register']" routerLinkActive="active">Register</a></li>
             <li class="mb-3"><a href="#"><span class="heading-colour-change">Follow us</span></a></li>
             
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 contact">
-          <h5 class="mt-lg-0 mt-sm-4 heading-colour-change fw-bold">Contact</h5>
+          <h5 class="mt-lg-0 mt-sm-4 heading-colour-change fw-bold" routerLink="/contact" routerLinkActive="active">Contact</h5>
           <!-- <p>22, Lorem ipsum dolor, consectetur adipiscing</p> -->
           <p class="my-3"><i class="bi bi-telephone-fill me-2"></i>+234 679 810011</p>
           <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i>27, Alara Street Yaba 100012 Lagos State</p>
