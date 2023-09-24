@@ -1,4 +1,4 @@
-<section id="contact-section">
+<section id="contact-section" class="my-4">
   <div class="container-fluid">
     <div class="container">
       <div class="row">
@@ -49,53 +49,83 @@
                   class="invalid-feedback"
                 >
                   <div *ngIf="f['phone'].errors['required']">
-                    Username is required
+                    Your phone number is required
                   </div>
                   <div *ngIf="f['phone'].errors['minlength']">
-                    Phone number must be at least 11 numbers without country code
+                    Phone number must be at least 11 numbers without country
+                    code
                   </div>
                   <div *ngIf="f['phone'].errors['maxlength']">
                     Phone number must not exceed 13 numbers with countey code
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="form-group col-md-6 col-xs-12">
                 <label for="inputEmail4" class="form-label">Email</label>
                 <input
                   type="email"
                   class="form-control"
                   id="inputEmail4"
                   placeholder="Enter your email address"
+                  formControlName="email"
+                  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
                 />
                 <div
-                  *ngIf="submitted && f['fullname'].errors"
+                  *ngIf="submitted && f['email'].errors"
                   class="invalid-feedback"
                 >
-                  <div *ngIf="f['fullname'].errors['required']">
-                    Email address is required
+                  <div *ngIf="f['email'].errors['required']">
+                    Email is required
                   </div>
+                  <div *ngIf="f['email'].errors['email']">Email is invalid</div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="form-group col-md-6 col-xs-12">
                 <label for="inputTopic" class="form-label">Project Topic</label>
                 <input
                   type="text"
                   class="form-control"
+                  formControlName="topic"
                   id="inputTopic"
                   placeholder="What's your group's topic"
+                  [ngClass]="{ 'is-invalid': submitted && f['topic'].errors }"
                 />
+                <div
+                  *ngIf="submitted && f['topic'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['topic'].errors['required']">
+                    Your team's topic is required
+                  </div>
+                </div>
               </div>
-              <div class="col-md-6">
+              <div class="form-group col-xs-12 col-md-6">
                 <label for="inputCategory" class="form-label">Category</label>
-                <select id="inputCategory" class="form-select">
-                  <option selected>Select your category</option>
+                <select
+                  id="inputCategory"
+                  class="custom-select"
+                  formControlName="category"
+                >
+                  <option selected value="">Select your category</option>
                   <option>...</option>
                 </select>
+                <div
+                  *ngIf="submitted && f['category'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['category'].errors['required']">
+                    <sup>*</sup>Please provide a category
+                  </div>
+                </div>
               </div>
               <div class="col-md-6">
                 <label for="inputSize" class="form-label">Group Size</label>
-                <select id="inputSize" class="form-select">
-                  <option selected>Seclect your group size</option>
+                <select
+                  id="inputSize"
+                  class="custom-select"
+                  formControlName="size"
+                >
+                  <option selected>Select your group size</option>
                   <option>...</option>
                 </select>
               </div>
