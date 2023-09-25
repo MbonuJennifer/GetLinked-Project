@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { GetLinkedService } from 'src/app/Service/get-linked.service';
-
 
 @Component({
   selector: 'app-register-form',
@@ -9,6 +14,7 @@ import { GetLinkedService } from 'src/app/Service/get-linked.service';
   styleUrls: ['./register-form.component.css'],
 })
 export class RegisterFormComponent implements OnInit {
+  [x: string]: any;
   registerForm: FormGroup = new FormGroup({
     teamName: new FormGroup(''),
     phone: new FormGroup(''),
@@ -26,6 +32,7 @@ export class RegisterFormComponent implements OnInit {
   ) {}
 
   categories: any[] = [];
+  sizes: number[] = Array.from({ length: 25 }, (_, i) => i + 1);
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -45,9 +52,10 @@ export class RegisterFormComponent implements OnInit {
       acceptTerms: [false, Validators.requiredTrue],
     });
 
-    this.service.getCategories().subscribe((data: any) => {
-      this.categories = data.categories;
-    });
+    // this.service.getCategories().subscribe((data: any) => {
+    //   this.categories = data.categories;
+    //   this.registerForm.controls['category'].setValue('');
+    // });
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -67,5 +75,15 @@ export class RegisterFormComponent implements OnInit {
     this.registerForm.reset();
   }
 
+  changeCategory(e: any) {
+    this['category']?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
+  changeSize(e: any) {
+    this['size']?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
 
 }

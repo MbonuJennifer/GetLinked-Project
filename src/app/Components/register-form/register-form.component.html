@@ -2,7 +2,13 @@
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-md-5 col-xs-12"></div>
+        <div class="col-md-5 col-xs-12">
+          <img
+                class="img-fluid register-img"
+                src="/assets/Images/Register.png"
+                alt="3D Graphics designer giving thumbs up"
+              />
+        </div>
         <div class="col-md-7 col-xs-12">
           <div class="card p-5">
             <h4 class="Contact-Title heading-colour-change">Register</h4>
@@ -105,29 +111,43 @@
                   id="inputCategory"
                   class="custom-select"
                   formControlName="category"
-                >
-                  <option selected value="">Select your category</option>
-                  <option>...</option>
+                  (change)="changeCategory($event)"
+                  [ngClass]="{ 'is-invalid': submitted && f['category'].errors }"
+                  onfocus='this.size=4;' onblur='this.size=0;' onchange='this.size=1; this.blur();'
+                  >
+                  <option value="" disabled selected>Select your category</option>
+                  <option *ngFor="let category of categories" [ngValue]="category.id">{{ category.name }}</option>
                 </select>
                 <div
-                  *ngIf="submitted && f['category'].errors"
-                  class="invalid-feedback"
+                *ngIf="submitted && f['category'].errors"
+                class="invalid-feedback"
                 >
-                  <div *ngIf="f['category'].errors['required']">
-                    <sup>*</sup>Please provide a category
-                  </div>
+                <div *ngIf="f['category'].errors['required']">
+                  Please select a category
                 </div>
               </div>
-              <div class="col-md-6">
-                <label for="inputSize" class="form-label">Group Size</label>
-                <select
-                  id="inputSize"
-                  class="custom-select"
-                  formControlName="size"
+            </div>
+            <div class="form-group col-xs-12 col-md-6">
+              <label for="inputSize" class="form-label">Group Size</label>
+              <select
+              id="inputSize"
+              class="custom-select"
+              formControlName="size"                                  
+              [ngClass]="{ 'is-invalid': submitted && f['size'].errors }"
+              onfocus='this.size=4;' onblur='this.size=0;' onchange='this.size=1; this.blur();'
+              (change)="changeSize($event)"
                 >
-                  <option selected>Select your group size</option>
-                  <option>...</option>
+                  <option value="" disabled selected>Select your group size</option>
+                  <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
                 </select>
+                <div
+                  *ngIf="submitted && f['size'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['size'].errors['required']">
+                    Please select your group size
+                  </div>
+                </div>
               </div>
               <div class="col-12">
                 <p class="para-colour-change mb-0">

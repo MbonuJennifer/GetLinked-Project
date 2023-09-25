@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GetLinkedService {
-  baseUrl = 'https://backend.getlinked.ai';
-  constructor(private http: HttpClient) {}
+  // baseUrl = 'https://backend.getlinked.ai';
+  // constructor(private http: HttpClient) {}
 
-  getCategories(): Observable<any> {
-    const url = `${this.baseUrl}/hackathon/categories-list`;
-    return this.http.get(url);
-  }
+  // getCategories(): Observable<any> {
+  //   const url = `${this.baseUrl}/hackathon/categories-list`;
+  //   return this.http.get(url);
+  // }
 }
